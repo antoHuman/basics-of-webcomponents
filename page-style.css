@@ -9,3 +9,11 @@ progress-bar {
 :not(:defined) {
     display: none;
 }
+
+progress-bar::part(bar) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 70%;
+    transform: translateY(-50%);
+}
