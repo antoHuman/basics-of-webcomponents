@@ -6,6 +6,7 @@
     <title>Progress bar WC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="progress-bar.js"></script>
+    <link rel="stylesheet" href="page-style.css">
 </head>
 <body>
     <h1>Progress bar webcomponent</h1>
@@ -15,9 +16,11 @@
             <div class="bar"></div>
         </div>
     </template>
-    <progress-bar></progress-bar>
-    <progress-bar style="margin-top: 20px">
-        <p>Test content</p>
-    </progress-bar>
+    <div class="wrapper">
+        <progress-bar></progress-bar>
+        <progress-bar>
+            <p>Test content</p>
+        </progress-bar>
+    </div>
 </body>
 </html>
