@@ -4,7 +4,7 @@ class ProgressBar extends HTMLElement {
         super();
         console.log('constructor');
         this.attachShadow({mode: 'open'});
-        this.shadowRoot.innerHTML = '<p>I am in the Shadow DOM</p>';
+        this.shadowRoot.appendChild(this.templateEl.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -13,6 +13,10 @@ class ProgressBar extends HTMLElement {
 
     disconnectedCallback() {
         console.log('disconnectedCallback');
+    }
+
+    get templateEl() {
+        return document.getElementById('progress-bar-template');
     }
 }
 
