@@ -10,10 +10,13 @@
 <body>
     <h1>Progress bar webcomponent</h1>
     <template id="progress-bar-template">
-        <p>I am in the Shadow DOM, from the template</p>
+        <link rel="stylesheet" href="progress-bar.css">
+        <div class="track">
+            <div class="bar"></div>
+        </div>
     </template>
     <progress-bar></progress-bar>
-    <progress-bar>
+    <progress-bar style="margin-top: 20px">
         <p>Test content</p>
     </progress-bar>
 </body>

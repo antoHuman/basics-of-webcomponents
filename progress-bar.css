@@ -1,0 +1,24 @@
+
+:host {
+    --bar-background: blue;
+    --border-radius: 4px;
+    --track-background: lightgrey;
+    display: block; /* default: inline */
+    height: 20px;
+}
+
+.track {
+    background: var(--track-background);
+    width: 100%;
+}
+
+.bar {
+    background: var(--bar-background);
+    width: 70%;
+}
+
+.track, .bar {
+    height: 100%;
+    border-radius: var(--border-radius);
+
+}
