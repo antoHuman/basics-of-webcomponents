@@ -13,6 +13,9 @@
     <template id="progress-bar-template">
         <link rel="stylesheet" href="progress-bar.css">
         <div class="track">
+            <div class="text">
+                <slot></slot>
+            </div>
             <div class="bar"></div>
         </div>
     </template>
@@ -20,7 +23,13 @@
         <progress-bar></progress-bar>
         <progress-bar wc-percentage="70"></progress-bar>
         <progress-bar>
-            <p>Test content</p>
+            <span>Slot content</span>
+        </progress-bar>
+        <progress-bar>
+            <p>Slot content</p>
+        </progress-bar>
+        <progress-bar>
+            <p slot="test">Slot content</p>
         </progress-bar>
     </div>
 </body>

@@ -10,6 +10,7 @@
 .track {
     background: var(--track-background);
     width: 100%;
+    position: relative;
 }
 
 .bar {
@@ -21,4 +22,17 @@
     height: 100%;
     border-radius: var(--border-radius);
 
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+}
+
+::slotted(*) {
+    display: inline;
 }
