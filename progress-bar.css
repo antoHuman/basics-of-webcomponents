@@ -14,7 +14,7 @@
 
 .bar {
     background: var(--bar-background);
-    width: 70%;
+    width: 0%;
 }
 
 .track, .bar {

@@ -1,5 +1,10 @@
 
 class ProgressBar extends HTMLElement {
+
+    static get observedAttributes() {
+        return ['wc-percentage'];
+    }
+
     constructor() {
         super();
         console.log('constructor');
@@ -15,9 +20,32 @@ class ProgressBar extends HTMLElement {
         console.log('disconnectedCallback');
     }
 
+    attributeChangedCallback(attrName, oldValue, newValue) {
+        console.log('attributeChangedCallback');
+        console.log(attrName, oldValue, newValue);
+        switch (attrName) {
+            case 'wc-percentage':
+                let percentage = parseFloat(newValue) || 0;
+                if (percentage < 0) {
+                    percentage = 0;
+                }
+                if (percentage > 100) {
+                    percentage = 100;
+                }
+                this._barEl.style.width = percentage + '%';
+                break;
+        }
+
+    }
+
     get templateEl() {
         return document.getElementById('progress-bar-template');
     }
+
+    get _barEl() {
+        return this.shadowRoot.querySelector('.bar');
+    }
+
 }
 
 customElements.define('progress-bar', ProgressBar);
