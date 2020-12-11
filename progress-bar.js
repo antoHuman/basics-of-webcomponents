@@ -46,6 +46,14 @@ class ProgressBar extends HTMLElement {
         return this.shadowRoot.querySelector('.bar');
     }
 
+    get wcPercentage() {
+        return this.getAttribute('wc-percentage');
+    }
+
+    set wcPercentage(value) {
+        this.setAttribute('wc-percentage', value);
+    }
+
 }
 
 customElements.define('progress-bar', ProgressBar);
