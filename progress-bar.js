@@ -56,4 +56,5 @@ class ProgressBar extends HTMLElement {
 
 }
 
-customElements.define('progress-bar', ProgressBar);
+setTimeout(()=> {customElements.define('progress-bar', ProgressBar);
+}, 1000)

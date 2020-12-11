@@ -5,3 +5,7 @@ progress-bar:not(:first-child) {
 progress-bar {
     --bar-background: lightblue;
 }
+
+:not(:defined) {
+    display: none;
+}
