@@ -5,8 +5,25 @@
     <meta name="robots" content="noindex, nofollow" />
     <title>Progress bar WC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="progress-bar.js"></script>
+    <link rel="stylesheet" href="page-style.css">
 </head>
 <body>
     <h1>Progress bar webcomponent</h1>
+
+    <template id="progress-bar-template">
+        <link rel="stylesheet" href="progress-bar.css">
+        <div class="track">
+            <div class="text">
+                <slot></slot>
+            </div>
+            <div class="bar"></div>
+        </div>
+    </template>
+
+    <progress-bar wc-percentage="10">
+        <p>Test content</p>
+        <p slot="text">Test content 2</p>
+    </progress-bar>
 </body>
 </html>

@@ -1,0 +1,38 @@
+:host {
+    --bar-background: blue;
+    --border-radius: 4px;
+    --track-background: lightgrey;
+    display: block; /* default: inline */
+    height: 20px;
+
+}
+
+.track {
+    position: relative;
+    background: var(--track-background);
+    width: 100%;
+}
+
+.bar {
+    background: var(--bar-background);
+    width: 70%;
+}
+
+.track, .bar {
+    height: 100%;
+    border-radius: var(--border-radius);
+
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+}
+
+::slotted(p) {
+    display: inline;
+}
